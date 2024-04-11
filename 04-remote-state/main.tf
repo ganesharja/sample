@@ -1,4 +1,4 @@
-resource "aws_instance" "app" {
+resource "aws_instance" "web" {
   # ami                       = "ami-0e977b99c38a13dfc"
   count                     =var.howManyYouWant
   ami                       = "ami-0081f769161bc01f5"
