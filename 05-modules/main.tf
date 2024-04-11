@@ -8,3 +8,7 @@ module "ec2" {
 module "sg" {
     source      = "./sg"
 }
+
+output "publicip" {
+    value   = module.ec2.publicip
+}
