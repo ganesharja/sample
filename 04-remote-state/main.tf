@@ -20,7 +20,7 @@ resource "aws_instance" "web" {
 
 
 variable "instances" {
-    default = ["cart", "catalouge", "user"]
+    default = ["cart", "catalouge", "user","shipping"]
 }
 
 output "private_ip_address" {
