@@ -5,6 +5,6 @@ resource "aws_instance" "web" {
   instance_type             = "t3.medium"
 
   tags = {
-    Name = "Terraform-web-Instance-${count.index}"
+    Name = "Terraform-web-Instance-${count.index+1}"
   }
 }
