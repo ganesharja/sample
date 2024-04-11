@@ -45,24 +45,27 @@ Can we write TF Code in multiples files of a folder ?
 
 # Common Terraform Commands
 
-            $ terraform init 
+    $ terraform init 
     $ terraform plan
     $ terraform apply -auto-approve 
 
-if you want to supply any values of the variable from the command line.
+## if you want to supply any values of the variable from the command line.
 
         
     $ terraform plan -var VARNAME=value
     $ terraform apply -auto-approve -var VARNAME=value
 
-If you want to supply any values of the variable from the anyother file apart from terraform.tfvars, you need to explicity pass the varaible file name to be used .
+## If you want to supply any values of the variable from the anyother file apart from terraform.tfvars, you need to explicity pass the varaible file name to be used .
 
     
     $ terraform plan -var-file=dev.tfvars
     $ terraform apply -auto-approve -var-file=dev.tfvars
 
 
+## precedence
 
+        When compared to the values of the variables declared in terraform.tfvars, command line variables will have higher precendence
 
+        -var / -var-file   >  terraform.auto.tfvars  > terraformtfvars > shell variables
 
 
