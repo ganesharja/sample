@@ -1,4 +1,4 @@
-resource "aws_instance" "web" {
+resource "aws_instance" "app" {
   # ami                       = "ami-0e977b99c38a13dfc"
   ami                       = "ami-0081f769161bc01f5"
   instance_type             = "t3.medium"
@@ -10,9 +10,9 @@ resource "aws_instance" "web" {
   }
 }
 
-# output "private_ip_address" {
-#   value = aws_instance.app.private_dns
-# }
+output "private_ip_address" {
+  value = aws_instance.app.private_dns
+}
 
 # # Creates Security Group
 # resource "aws_security_group" "allow_ssh" {
