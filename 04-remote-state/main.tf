@@ -9,7 +9,7 @@ data "aws_ami" "ami" {
 resource "aws_instance" "web" {
   # ami                       = "ami-0e977b99c38a13dfc"
   count                     =var.howManyYouWant
-  ami                       = aws_ami.ami.image_id
+  ami                       = data.aws_ami.ami.image_id
   instance_type             = "t3.medium"
 
   tags = {
